@@ -1,17 +1,25 @@
 <template>
   <div class="home">
     <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
+    <CanvasView :points='getPoints()'></CanvasView>
   </div>
 </template>
 
 <script lang="ts">
-import { Options, Vue } from 'vue-class-component';
-import HelloWorld from '@/components/HelloWorld.vue'; // @ is an alias to /src
+import { defineComponent, reactive } from 'vue';
+import HelloWorld from '@/components/HelloWorld.vue';
+import CanvasView from '@/components/CanvasView.vue';
+import {points} from '@/points'
 
-@Options({
-  components: {
+export default defineComponent({
+  components:{
     HelloWorld,
+    CanvasView
   },
+  methods:{
+    getPoints(){
+      return reactive(points)
+    }
+  }
 })
-export default class HomeView extends Vue {}
 </script>

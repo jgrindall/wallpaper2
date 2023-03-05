@@ -80,8 +80,8 @@ export const unionAxis = (arr:RealSegmentList):RealSegmentList => {
             } */
         }
     }
-    return union;
-};
+    return []
+ };
 
 export const unionColinear = (segs:SegmentList):SegmentList=>{
     if(segs.length <= 1){
