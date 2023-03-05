@@ -24,13 +24,9 @@ export const orderByAngle = (p:NonEmptyArray<Point>, centre:Point):NonEmptyArray
 }
 
 export const wrapArray = <T>(arr:NonEmptyArray<T>, i:number):NonEmptyArray<T> => {
-    const r:NonEmptyArray<T> = [];
-    const numPoints:number = arr.length;
-    for(let j = 0; j < numPoints; j++){
-        const indexToPush:number = (i + j) % numPoints;
-        r.push(arr[indexToPush]);
-    }
-    return r;
+    return arr.map((_: T, j:number)=>{
+        return arr[(i + j) %  arr.length]
+    }) as NonEmptyArray<T>
 };
 
 export const getCentreOfMass = (arr:NonEmptyArray<Point>):Point=>{

@@ -71,13 +71,13 @@ export const unionAxis = (arr:RealSegmentList):RealSegmentList => {
         }
         else{
             inSegments.push(obj.index);
-            if(_eq(obj.t, last(union)[1])){
+            /* if(_eq(obj.t, last(union)[1])){
                 currentT = last(union)[0];
                 union.pop();
             }
             else{
                 currentT = obj.t;
-            }
+            } */
         }
     }
     return union;
