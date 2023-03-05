@@ -14,6 +14,16 @@ export const points:Points = {
             x:800,
             y:400
         },
+    ],
+    edges:[
+        {
+            a: 1,
+            b: 0
+        },
+        {
+            a: 2,
+            b: 1
+        }
     ]
 }
 

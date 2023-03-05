@@ -1,3 +1,14 @@
+export type Edge = {
+    a:number,
+    b:number
+}
+
+export type Point = {
+    x:number,
+    y:number
+}
+
 export type Points = {
-    pts: {x:number, y:number}[]
+    pts: Point[],
+    edges: Edge[]
 }
